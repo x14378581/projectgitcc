@@ -3,4 +3,6 @@ class Patient < ApplicationRecord
         where("lastname LIKE ?", "%#{search}%")
         where("infection LIKE ?", "%#{search}%")
     end
+    
+    belongs_to :user 
 end
