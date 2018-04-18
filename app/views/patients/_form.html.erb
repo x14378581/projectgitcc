@@ -13,40 +13,40 @@
 
   <div class="field">
     <%= form.label :firstname %>
-    <%= form.text_field :firstname, id: :patient_firstname %>
+    <%= form.text_field :firstname, id: :patient_firstname, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :lastname %>
-    <%= form.text_field :lastname, id: :patient_lastname %>
+    <%= form.text_field :lastname, id: :patient_lastname, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :dateofbirth %>
-    <%= form.text_field :dateofbirth, id: :patient_dateofbirth %>
+    <%= form.text_field :dateofbirth, id: :patient_dateofbirth, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :address %>
-    <%= form.text_field :address, id: :patient_address %>
+    <%= form.text_field :address, id: :patient_address, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :phonenumber %>
-    <%= form.number_field :phonenumber, id: :patient_phonenumber %>
+    <%= form.number_field :phonenumber, id: :patient_phonenumber, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :infection %>
-    <%= form.text_field :infection, id: :patient_infection %>
+    <%= form.text_field :infection, id: :patient_infection, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :injury %>
-    <%= form.text_field :injury, id: :patient_injury %>
+    <%= form.text_field :injury, id: :patient_injury, class: "form-control" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div  class="actions">
+    <%= form.submit 'Create Patient', :class => 'btn btn-primary' %>
   </div>
 <% end %>

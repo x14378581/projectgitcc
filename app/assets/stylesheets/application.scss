@@ -19,7 +19,7 @@ h1{
     text-align: center;
     font-size:30px;
     font-family: Helvetica;
-    color: #2F4F4F;
+    color: #blue;
     text-transform: uppercase;
 }
 
@@ -30,4 +30,19 @@ table, th, td {
 
 .jumbotron {
     background-color: #6c757d;
+}
+
+#FirstHeading {
+    color: #f8f9fa;
+    padding-top:-100px;
+    vertical-align: baseline;
+}
+
+#First {
+    color: #f8f9fa;
+}
+li.FirstHeading{
+     color: #f8f9fa;
+    padding-top:-100px;
+    vertical-align: baseline;
 }
