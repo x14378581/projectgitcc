@@ -21,15 +21,24 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             
-       
+       <li>
               <%= render 'devise/menu/login_items' %>
-       
+       </li>
             <a class=" py-3 px-0 px-lg-3 rounded js-scroll-trigger" id="FirstHeading">
-        
+        <li>
                  <%= render 'devise/menu/registration_items' %>
-      
-       
-           </a>
+            </li>     
+             <a class=" py-3 px-0 px-lg-3 rounded js-scroll-trigger" id="FirstHeading">
+
+        
+              <% if user_signed_in? %>
+         <li>
+            <%= link_to 'My Profile', user_path(current_user) %>
+</li>
+            <% end %>
+       <% if not user_signed_in? %>
+           
+           <% end %>
           </ul>
         </div>
       </div>
