@@ -22,6 +22,7 @@
       <th>Phonenumber</th>
       <th>Infection</th>
       <th>Injury</th>
+      <th>Status</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -36,6 +37,7 @@
         <td><%= patient.phonenumber %></td>
         <td><%= patient.infection %></td>
         <td><%= patient.injury %></td>
+        <td><%= image_tag patient.status ? 'x.png' : 'tick.png' %></td>
         <td><%= link_to 'Show', patient,  class: "btn btn-primary" %></td>
         <td><%= link_to 'Edit', edit_patient_path(patient),  class:"btn btn-primary" %></td>
         <td><%= link_to 'Destroy', patient, method: :delete,  class:"btn btn-primary", data: { confirm: 'Are you sure?' }  %></td>
@@ -47,8 +49,17 @@
 
 <%= link_to 'New Patient', new_patient_path %>
  <% end %>
+ 
+
 <%= stylesheet_link_tag "/public/stylesheet_link_tag/index" %>
 </div>
   </div>
 </div>
+<p><b>Total Published: <%= pluralize @presenter.status_patients_count, 'patient'  %></b></p>
+ <h2>Full name of all patients</h2>
+ <ul>
+    <% @presenter.patients.each do |patient| %>
+    <td><%= patient.firstname %></td>
 
+ <% end %>
+  </ul>

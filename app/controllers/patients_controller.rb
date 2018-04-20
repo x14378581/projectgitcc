@@ -10,6 +10,7 @@ class PatientsController < ApplicationController
     else
       @patients = Patient.all.order('created_at DESC')
     end
+    @presenter = Patients::IndexPresenter.new
   end
 
   # GET /patients/1
@@ -74,7 +75,7 @@ class PatientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def patient_params
-      params.require(:patient).permit(:firstname, :lastname, :dateofbirth, :address, :phonenumber, :infection, :injury)
+      params.require(:patient).permit(:firstname, :lastname, :dateofbirth, :address, :phonenumber, :infection, :injury, :status)
     end
     
 

@@ -5,4 +5,6 @@ class Patient < ApplicationRecord
     end
     
     belongs_to :user 
+    scope :status_count, -> { where(status: true).count}
+
 end

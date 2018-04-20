@@ -34,6 +34,10 @@
   <strong>Injury:</strong>
   <%= @patient.injury %>
 </p>
+<p>
+  <strong>Status:</strong>
+  <%= @patient.status %>
+</p>
 
 <%= link_to 'Edit', edit_patient_path(@patient) %> |
 <%= link_to 'Back', patients_path %>
