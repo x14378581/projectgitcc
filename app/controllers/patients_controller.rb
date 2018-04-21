@@ -12,7 +12,12 @@ class PatientsController < ApplicationController
     end
     @presenter = Patients::IndexPresenter.new
   end
-
+  def checker
+    @input1 = params[:search_string]
+    @result = Check.runcheck(@input1)
+    flash[:notice] = @result
+    redirect_to request.referrer
+  end
   # GET /patients/1
   # GET /patients/1.json
   def show
@@ -77,6 +82,8 @@ class PatientsController < ApplicationController
     def patient_params
       params.require(:patient).permit(:firstname, :lastname, :dateofbirth, :address, :phonenumber, :infection, :injury, :status)
     end
-    
+
+
+
 
 end

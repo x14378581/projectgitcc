@@ -39,5 +39,14 @@
   <%= @patient.status %>
 </p>
 
+Doctor <br>
+<%= @input1 %> is <%= @result %>
+<hr>
+<h1>Doctor Availability</h1>
+<%= form_tag "/validate" do %>
+<%= text_field_tag :search_string %>
+<%= submit_tag "Search" %>
+<% end %>
+
 <%= link_to 'Edit', edit_patient_path(@patient) %> |
 <%= link_to 'Back', patients_path %>
