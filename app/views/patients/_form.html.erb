@@ -48,7 +48,7 @@
   
   <div class="field">
     <%= form.label :status %>
-    <%= form.select :status, options_for_select([['Unseen', false], ['Seen Too', true]], id: :patient_status),{}, {class: 'form-control'} %>
+    <%= form.select :status, options_for_select([[' ', false],['Unseen',false],['Seen Too',  true]], id: :patient_status),{}, {class: 'form-control'} %>
 
   </div>
   <div  class="actions">

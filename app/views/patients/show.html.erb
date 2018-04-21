@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<h1>Patients Information</h1>
 
 <p>
   <strong>Firstname:</strong>
@@ -39,13 +39,14 @@
   <%= @patient.status %>
 </p>
 
-Doctor <br>
-<%= @input1 %> is <%= @result %>
+<br>
+<%= @input1 %> <%= @result %>
 <hr>
 <h1>Doctor Availability</h1>
 <%= form_tag "/validate" do %>
 <%= text_field_tag :search_string %>
 <%= submit_tag "Search" %>
+<p id="notice"><%= notice %></p>
 <% end %>
 
 <%= link_to 'Edit', edit_patient_path(@patient) %> |
