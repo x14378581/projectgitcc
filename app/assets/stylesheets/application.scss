@@ -42,3 +42,21 @@ li.FirstHeading{
     padding-top:-100px;
     vertical-align: baseline;
 }
+
+.links {
+       color: white;
+}
+
+.links:hover {
+       color: black;
+        text-decoration: none;
+
+}
+
+.pos {
+    margin-top: -25px;
+    margin-right: -900px;
+    padding-right: 10;
+    color:white;
+    font-family: Helvetica;
+}

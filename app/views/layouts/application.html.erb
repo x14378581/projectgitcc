@@ -33,12 +33,9 @@
         
               <% if user_signed_in? %>
          <li>
-            <%= link_to 'My Profile', user_path(current_user) %>
+            <%= link_to 'My Profile', user_path(current_user), class: "links" %>
 </li>
             <% end %>
-       <% if not user_signed_in? %>
-           <a>hello</a>
-           <% end %>
           </ul>
         </div>
       </div>

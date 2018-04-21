@@ -1,7 +1,9 @@
-<h1>Users Information</h1>
-<p><%= full_name %></p>
+<h2>Users Information</h2>
+<h6>Name</h6>
+<p><%= @user.firstname  %></p>
+<h6>Email</h6>
 <p><%= @user.email %></p>
-
+<h2>Your Patients</h2>
 <% @user_patients.each do |patient| %>
     <%= link_to patient.user, patient_path(patient) %>
 <% end %>
