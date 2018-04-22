@@ -4,8 +4,16 @@ class PatientsController < ApplicationController
   # GET /patients
   # GET /patients.json
   def index
+    @patients = Patient.all 
+    if params[:search]
+      @patients = Patient.search(params[:search]).order("created_at DESC")
+    else
+      @patients = Patient.all.order('created_at DESC')
+    end     
     @presenter = Patients::IndexPresenter.new
   end
+  
+  
   def checker
     @input1 = params[:search_string]
     @result = Check.runcheck(@input1)
